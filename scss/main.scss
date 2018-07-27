@@ -79,7 +79,11 @@ main {
   grid-gap: 30px;
   grid-template-areas:
     "bioimage bio bio"
-    "job1 job2 job3";
+    "work . ."
+    "job1 job2 job3"
+    "job4 . ."
+    "edu . ."
+    "edu1 edu2 edu3";
   grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
@@ -91,6 +95,10 @@ main {
 
   .bio {
     grid-area: bio;
+  }
+
+  .work1 {
+    grid-area: work;
   }
 
   .job-1 {
@@ -105,10 +113,36 @@ main {
     grid-area: job3;
   }
 
+  .job-4 {
+    grid-area: job4;
+  }
+
+  .edu1 {
+    grid-area: edu;
+  }
+
+  .edu-1 {
+    grid-area: edu1;
+  }
+
+  .edu-2 {
+    grid-area: edu2;
+  }
+
+  .edu-3 {
+    grid-area: edu3;
+  }
+
   .job {
     background: lighten($primary-color, 5);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
+  }
+
+  .edu {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px dotted;
   }
 }
 
@@ -157,28 +191,18 @@ main {
 }
 
 // Button Styles
-.btn {
+.btn-dark {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
+  background: darken($primary-color, 50);
+  color: #fff;
 
   &:hover {
     background: $secondary-color;
     color: set-text-color($secondary-color);
   }
-}
-
-.btn-dark {
-  @extend .btn;
-  background: darken($primary-color, 50);
-  color: #fff;
-}
-
-.btn-light {
-  @extend .btn;
-  background: lighten($primary-color, 50);
-  color: #333;
 }
 
 @import "mobile";

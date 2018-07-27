@@ -160,7 +160,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-areas: "bioimage bio bio" "work . ." "job1 job2 job3" "job4 . ." "edu . ." "edu1 edu2 edu3";
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
@@ -169,16 +169,32 @@ main {
     border: #eece1a 3px solid; }
   .about-info .bio {
     grid-area: bio; }
+  .about-info .work1 {
+    grid-area: work; }
   .about-info .job-1 {
     grid-area: job1; }
   .about-info .job-2 {
     grid-area: job2; }
   .about-info .job-3 {
     grid-area: job3; }
+  .about-info .job-4 {
+    grid-area: job4; }
+  .about-info .edu1 {
+    grid-area: edu; }
+  .about-info .edu-1 {
+    grid-area: edu1; }
+  .about-info .edu-2 {
+    grid-area: edu2; }
+  .about-info .edu-3 {
+    grid-area: edu3; }
   .about-info .job {
     background: #515151;
     padding: 0.5rem;
     border-bottom: #eece1a 5px solid; }
+  .about-info .edu {
+    background: #515151;
+    padding: 0.5rem;
+    border-bottom: #eece1a 5px dotted; }
 
 .projects {
   display: grid;
@@ -211,22 +227,16 @@ main {
       .boxes div:hover span {
         color: #000; }
 
-.btn, .btn-dark, .btn-light {
+.btn-dark {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
-  margin-bottom: 0.3rem; }
-  .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #eece1a;
-    color: #000; }
-
-.btn-dark {
+  margin-bottom: 0.3rem;
   background: black;
   color: #fff; }
-
-.btn-light {
-  background: #c4c4c4;
-  color: #333; }
+  .btn-dark:hover {
+    background: #eece1a;
+    color: #000; }
 
 @media screen and (min-width: 1171px) {
   .projects {
@@ -263,7 +273,7 @@ main {
       width: 150px;
       height: 150px; }
   .about-info {
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-areas: "bioimage" "bio" "work" "job1" "job2" "job3" "job4" "edu" "edu1" "edu2" "edu3";
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
